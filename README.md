@@ -85,8 +85,8 @@ NOTES
 
     Lists a table of PVS devices with Personality strings that are not 32 characters in length.
 
-RELATED LINKS
-    https://www.linkedin.com/in/alainassaf/
+RELATED LINKS<br>
+    https://www.linkedin.com/in/alainassaf/<br>
     http://wagthereal.com
     
 # Legal and Licensing
