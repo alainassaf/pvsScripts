@@ -172,8 +172,8 @@ NOTES
 
     Script will check of a personality string exists and set FFFFFFFFFFFFFFFFFFFFFFFFFFFFC992 as the string if missing.
 
-RELATED LINKS
-    https://www.linkedin.com/in/alainassaf/
+RELATED LINKS<br>
+    https://www.linkedin.com/in/alainassaf/<br>
     http://wagthereal.com
 
 # Legal and Licensing
