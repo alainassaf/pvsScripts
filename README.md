@@ -89,6 +89,93 @@ RELATED LINKS<br>
     https://www.linkedin.com/in/alainassaf/<br>
     http://wagthereal.com
     
+# set-pvsPersonalityString.ps1
+Sets the Personality Strings for PVS Devices if missing
+
+#PS> get-help .\set-pvsPersonalityString.ps1 -full
+
+NAME<br>
+    C:\Codevault\github\pvsScripts\set-pvsPersonalityString.ps1
+
+SYNOPSIS<br>
+    Sets the Personality Strings for PVS Devices if missing
+
+
+SYNTAX<br>
+    C:\Codevault\github\pvsScripts\set-pvsPersonalityString.ps1 [-PVSDevice] <String> [[-PersonalityString] <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+
+
+DESCRIPTION<br>
+    Sets the Personality Strings for PVS Devices if missing. Run from PVS Server. Must have PVS PSnapIn
+
+
+PARAMETERS
+
+    -PVSDevice <String>
+        Requred string parameter. Device to set the personality string on. Script will check to ensure string is teh correct length and whether one exists already.
+
+        Required?                    true
+        Position?                    1
+        Default value
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+
+    -PersonalityString <String>
+        Optional string parameter. Value to set personality string to. If not set, script will create a string based on the device name.
+
+        Required?                    false
+        Position?                    2
+        Default value
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+
+    -WhatIf [<SwitchParameter>]
+
+        Required?                    false
+        Position?                    named
+        Default value
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+
+    -Confirm [<SwitchParameter>]
+
+        Required?                    false
+        Position?                    named
+        Default value
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
+NOTES
+
+        NAME: set-pvsPersonalityString.ps1
+        AUTHOR: Alain Assaf
+        LASTEDIT: 1/3/2018
+        VERSION: 1.02
+        CHANGE LOG - Version - When - What - Who
+        1.00 - 1/3/2018 -Initial script - Alain Assaf
+        1.01 - 1/3/2018 - Changed string to use hexidecimal characters - Alain Assaf
+        1.02 - 1/3/2018 - Added try/catch to load snapin. Removed requires - Alain Assaf
+
+    -------------------------- EXAMPLE 1 --------------------------
+    PS>set-pvsPersonalityString.ps1 -PVSDevice PVSERVER
+
+    Script will check of a personality string exists and add one if missing based on the PVSERVER name.
+
+    -------------------------- EXAMPLE 2 --------------------------
+    PS>set-pvsPersonalityString.ps1 -PVSDevice PVSERVER -PersonalityString 'FFFFFFFFFFFFFFFFFFFFFFFFFFFFC992'
+
+    Script will check of a personality string exists and set FFFFFFFFFFFFFFFFFFFFFFFFFFFFC992 as the string if missing.
+
+RELATED LINKS
+    https://www.linkedin.com/in/alainassaf/
+    http://wagthereal.com
+
 # Legal and Licensing
 The check-deedrive.ps1 script is licensed under the [MIT license][].
 
